@@ -1,9 +1,9 @@
 
-# q1 24.3.1
-# q2 postgres:5432
+-- q1 24.3.1
+-- q2 db:5432
 
-# q3
-# 104802 198924 109603 27678 35189
+-- q3
+-- 104802 198924 109603 27678 35189
 SELECT COUNT(1)
 FROM green_taxi_data
 WHERE trip_distance <= 1
@@ -47,14 +47,14 @@ WHERE
 	AND
 	lpep_dropoff_datetime >= '2019-10-01' AND lpep_dropoff_datetime < '2019-11-01';
 
-# q4
-# 2019-10-31
+-- q4
+-- 2019-10-31
 SELECT lpep_pickup_datetime, trip_distance
 FROM green_taxi_data
 ORDER BY trip_distance DESC
 
-# q5
-# East Harlem North, East Harlem South, Morningside Heights
+-- q5
+-- East Harlem North, East Harlem South, Morningside Heights
 SELECT 
 z."Zone"
 , SUM(g.total_amount) AS total
@@ -64,8 +64,8 @@ WHERE CAST(g.lpep_pickup_datetime AS DATE)  = '2019-10-18'
 GROUP BY z."Zone"
 HAVING SUM(g.total_amount) > 13000
 
-# q6
-# JFK Airport
+-- q6
+-- JFK Airport
 SELECT g.lpep_pickup_datetime,
 pz."Zone",
 dz."Zone",
@@ -77,3 +77,6 @@ WHERE pz."Zone" = 'East Harlem North'
 AND CAST(g.lpep_pickup_datetime AS DATE) >= '2019-10-01'
 AND CAST(g.lpep_pickup_datetime AS DATE) < '2019-11-01'
 ORDER BY g.tip_amount DESC
+
+-- q7
+-- terraform init, terraform apply -auto-approve, terraform destroy
