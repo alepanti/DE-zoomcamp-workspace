@@ -32,8 +32,8 @@ def main(params):
     df = next(df_iter)
 
     # pre-processing for yellow
-    # df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-    # df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+    df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+    df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
     #preprocess for green
     #if green uncomment next 2 lines
@@ -49,8 +49,8 @@ def main(params):
             df = next(df_iter)
 
             # if yellow uncomment next 2 lines
-            #df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-            #df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+            df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+            df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
             #if green uncomment next 2 lines
             #df.lpep_pickup_datetime = pd.to_datetime(df.lpep_pickup_datetime)
