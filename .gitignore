@@ -1,2 +1,2 @@
-Module 1/docker-testing/output.csv
-Module 1/docker-testing/output.csv.gz
+*.gz
+*.parquet
