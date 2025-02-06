@@ -16,6 +16,7 @@ SELECT * FROM zoomcamp-dwh-450019.nytaxi.external_yellow_tripdata_2024;
 ```
 SELECT COUNT(1) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024;
 ```
+Rows: 20332093
 2.
 ```
 SELECT COUNT(DISTINCT PULocationID) FROM zoomcamp-dwh-450019.nytaxi.external_yellow_tripdata_2024; -- Estimate 0B
@@ -26,13 +27,14 @@ SELECT COUNT(DISTINCT PULocationID) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripd
 SELECT PULocationID FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024;
 SELECT PULocationID, DOLocationID FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024;
 ```
-  -- Estimated number of bytes read differ because BQ stores data in columnar storage.
+    Estimated number of bytes read differ because BQ stores data in columnar storage.
 
 4.
 ```
 SELECT COUNT(1) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024
-WHERE fare_amount = 0; -- 8333
+WHERE fare_amount = 0; 
 ```
+Trips where fare_amount = 0: 8333
 5.
 ```
 CREATE OR REPLACE TABLE zoomcamp-dwh-450019.nytaxi.yellow_tripdata_partitioned_clustered_2024
