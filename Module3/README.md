@@ -12,16 +12,19 @@ OPTIONS (
 CREATE OR REPLACE TABLE zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024 AS
 SELECT * FROM zoomcamp-dwh-450019.nytaxi.external_yellow_tripdata_2024;
 ```
+
 1.
 ```
 SELECT COUNT(1) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024;
 ```
 Rows: 20332093\
+
 2.
 ```
 SELECT COUNT(DISTINCT PULocationID) FROM zoomcamp-dwh-450019.nytaxi.external_yellow_tripdata_2024; -- Estimate 0B
 SELECT COUNT(DISTINCT PULocationID) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024; -- Estimate 155.12MB
 ```
+
 3.
 ```
 SELECT PULocationID FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024;
@@ -35,6 +38,7 @@ SELECT COUNT(1) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2
 WHERE fare_amount = 0; 
 ```
 Trips where fare_amount = 0: 8333\
+
 5.
 ```
 CREATE OR REPLACE TABLE zoomcamp-dwh-450019.nytaxi.yellow_tripdata_partitioned_clustered_2024
@@ -43,6 +47,7 @@ CLUSTER BY VendorID  -- cluster on VendorID
 AS
 SELECT * FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024;
 ```
+
 6.
 ```
 SELECT DISTINCT(VendorID) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024
