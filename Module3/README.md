@@ -60,7 +60,7 @@ WHERE DATE(tpep_pickup_datetime) BETWEEN '2024-03-01' AND '2024-03-15'; -- 29.92
 7. External Table data stored in: GCP Bucket
 8. Always cluster data best practice: False
 9. 
-'''
+```
 SELECT count(*) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024;
-'''
+```
 Estimates 0B processed. My guess would be it reads from table metadata and doesn't actually scan the rows.
