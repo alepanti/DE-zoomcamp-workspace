@@ -17,7 +17,7 @@ SELECT * FROM zoomcamp-dwh-450019.nytaxi.external_yellow_tripdata_2024;
 ```
 SELECT COUNT(1) FROM zoomcamp-dwh-450019.nytaxi.yellow_tripdata_non_partitoned_2024;
 ```
-Rows: 20332093\
+Rows: 20332093
 
 2.
 ```
