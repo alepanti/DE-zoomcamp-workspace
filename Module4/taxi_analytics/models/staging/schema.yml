@@ -2,16 +2,14 @@ version: 2
 
 sources:
   - name: staging
-    database: zoomcamp-dwh-450019
-    schema: taxi_data
+    database: "{{ env_var('DBT_BIGQUERY_PROJECT') }}"
+    schema: "{{ env_var('DBT_BIGQUERY_DATASET') }}"
 
     tables:
       - name: green_taxi_rides
       - name: yellow_taxi_rides
+      - name: fhv_taxi_rides
 
-tests:
-  +severity: warn 
-  
 models:
   - name: stg_green_taxi_rides
     description: ""
