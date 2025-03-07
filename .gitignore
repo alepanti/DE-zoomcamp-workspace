@@ -2,3 +2,5 @@
 **/*.parquet
 **/*.csv
 **/*.duckdb
+**/*.parquet
+**/*.parquet.crc
