@@ -1,0 +1,17 @@
+python spark_local.py \
+    --input_green=data/pq/green/2020/*/ \
+    --input_yellow=data/pq/yellow/2020/*/ \
+    --output=data/report-2020
+
+URL="spark://biccboii.:7077"
+spark-submit \
+    --master="${URL}" \
+    spark_local.py \
+        --input_green=data/pq/green/2021/*/ \
+        --input_yellow=data/pq/yellow/2021/*/ \
+        --output=data/report-2021   
+
+DataProc
+--input_green=gs://zcamp-nyc-taxi/pq/green/2021/*/
+--input_yellow=gs://zcamp-nyc-taxi/pq/yellow/2021/*/
+--output=gs://zcamp-nyc-taxi/report-2021  
