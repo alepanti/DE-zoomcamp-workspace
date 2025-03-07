@@ -9,3 +9,6 @@ Homework 3: DWH
 
 Homework Workshop: dlt
 [Module 4/homework.ipynb](https://github.com/alepanti/DE-zoomcamp-workspace/blob/b9b1f4cbdf15015d42ac0972ab356fea1da7e537/dlt-workshop/homework.ipynb)
+
+Homework 4: Analytics Engineering
+[Module4/README.md](https://github.com/alepanti/DE-zoomcamp-workspace/blob/2dafe1d28bb7bfe4b0c71ffe8e3d279074c97acc/Module4/README.md)
