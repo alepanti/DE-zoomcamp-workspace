@@ -4,3 +4,4 @@
 **/*.duckdb
 **/*.parquet
 **/*.parquet.crc
+**/data
